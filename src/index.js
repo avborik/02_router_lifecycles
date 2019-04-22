@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter, Route} from 'react-router-dom';
+import {BrowserRouter, Route, Link} from 'react-router-dom';
 
 
 // components
@@ -14,11 +14,18 @@ const App= () => {
        <BrowserRouter>
             <div>
                 <header>
-                    Header
+                    <Link to="/">Home</Link><br/>
+                    <Link to="/posts">Posts</Link><br/>
+                    <Link to={{
+                        pathname:'/profile',
+                        // hash:'#Boris',
+                        // search: '?profile=true'
+                    }}>Profile</Link><br/>
+                    <hr/>
                 </header>
-                <Route path="/" exact component={Home}/>
-                <Route path="/posts" component={Posts}/>
-                <Route path="/profile" component={Profile}/>
+                    <Route path="/" exact component={Home}/>
+                    <Route path="/posts" component={Posts}/>
+                    <Route path="/profile" component={Profile}/>
             </div>
        </BrowserRouter>
     )
