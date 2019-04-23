@@ -2,7 +2,7 @@ import React from 'react';
 
 const Conditional = () => {
 
-    const value = false;
+  //  const value = false;
     const returnValue = () => {
         return true
     }
